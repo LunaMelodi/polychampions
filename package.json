@@ -1,0 +1,25 @@
+{
+  "name": "polychampions",
+  "version": "1.0.0",
+  "description": "A website for the pPolyChampions Polytopia League",
+  "main": "\u001f\u001f",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunaMelodi/polychampions.git"
+  },
+  "keywords": [
+    "Polytopia"
+  ],
+  "author": "Luna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LunaMelodi/polychampions/issues"
+  },
+  "homepage": "https://github.com/LunaMelodi/polychampions#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
