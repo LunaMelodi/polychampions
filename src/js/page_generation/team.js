@@ -1,5 +1,5 @@
 
-export default function generateTeamPage(teamData) {
+export function generateTeamPage(teamData) {
   console.log("team script");
   
   let teamContentContainer = document.createElement('div');
