@@ -1,3 +1,3 @@
-import { navbar } from './page_generation/navbar';
+import { navbar } from './page_generation/navbar-footer-upButton';
 
 navbar();

@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Bombers</title>
+  <link rel="stylesheet" type="text/css" href="/src/css/styles.css">
+</head>
+<body>
+  <div id="navbarPlaceholder">
+  </div>
+
+  <div id="teamContentPlaceholder">
+  </div>
+
+  <div id="footerPlaceholder">
+  </div>
+
+  <script type="module">
+    import { generateTeamPage } from '/src/js/page_generation/team.js';
+    import { bombers } from '/src/data/teamsData.js';
+    generateTeamPage(bombers);
+  </script>
+  <script src="/src/js/page_generation/navbar-footer-upButton.js"></script>
+</body>
+</html>
