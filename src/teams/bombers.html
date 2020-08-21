@@ -15,11 +15,12 @@
   <div id="footerPlaceholder">
   </div>
 
+  <script src="/js/page_generation/navbar-footer-upButton.js"></script>
+
   <script type="module">
-    import { generateTeamPage } from '/src/js/page_generation/team.js';
-    import { bombers } from '/src/data/teamsData.js';
+    import { generateTeamPage } from '/js/page_generation/team.js';
+    import { bombers } from '/data/teamsData.js';
     generateTeamPage(bombers);
   </script>
-  <script src="/src/js/page_generation/navbar-footer-upButton.js"></script>
 </body>
 </html>

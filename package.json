@@ -7,7 +7,7 @@
     "test": "test",
     "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
     "css:scss": "node-sass --output-style compressed -o src/css src/scss",
-    "css:autoprefixer": "postcss -u autoprefixer -r src/*.css",
+    "css:autoprefixer": "postcss -u autoprefixer -r src/css/*.css",
     "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "build:images": "imagemin src/img/img-before-minification/* --out-dir=src/img",
