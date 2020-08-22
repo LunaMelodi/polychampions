@@ -1,5 +1,42 @@
 @import 'variables.scss';
 
 body {
-    color: $primary;
+  margin: 0;
+  font-family: $font;
+  background: $body-bg;
+  color: $body-text;
 }
+
+#navbarPlaceholder {
+  background: $navbar-bg;
+  >ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    >li {
+      padding: 1em;
+      background: $navbar-bg;
+      list-style-type: none;
+      &:hover {
+        background: $navbar-hover;
+      }
+      >a {
+        text-decoration: none;
+        color: $navbar-text;
+      }
+    }
+  }
+}
+
+#footerPlaceholder {
+  font-size: small;
+  text-align: center;
+  color: #ddd;
+  background: #333;
+  padding: 1em;
+}
+
+p {
+  padding: 10px;
+}
+
