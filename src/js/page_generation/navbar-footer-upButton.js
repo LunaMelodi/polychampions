@@ -1,7 +1,35 @@
 // NAVBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 console.log("navbar script");
 
-let ulNavbarContainer = document.createElement('ul');
+let navbarPlaceholder = document.querySelector('#navbarPlaceholder');
+
+/* navbarPlaceholder.innerHTML += '<div class="dropdown">';
+navbarPlaceholder.innerHTML += '<button class="dropbtn">Dropdown</button>';
+navbarPlaceholder.innerHTML += '<div class="dropdown-content">';
+navbarPlaceholder.innerHTML += '<a href="#">Link 1</a>';
+navbarPlaceholder.innerHTML += '<a href="#">Link 2</a>';
+navbarPlaceholder.innerHTML += '<a href="#">Link 3</a>';
+navbarPlaceholder.innerHTML += '</div>';
+navbarPlaceholder.innerHTML += '</div>'; */
+
+navbarPlaceholder.innerHTML += `<div class="dropdown">
+<button class="dropbtn">Dropdown</button>
+<div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+</div>
+</div>`
+
+
+  
+  
+    
+    
+    
+  
+
+/* let ulNavbarContainer = document.createElement('ul');
 
 let liPClogo = document.createElement('li');
 liPClogo.innerHTML = '<a href="/index">PolyChampions</a>';
@@ -21,7 +49,7 @@ ulNavbarContainer.appendChild(liGuides);
 
 let navbarPlaceholder = document.querySelector('#navbarPlaceholder');
 navbarPlaceholder.appendChild(ulNavbarContainer);
-
+ */
 
 // FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 console.log("footer script");

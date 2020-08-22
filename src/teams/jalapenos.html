@@ -2,8 +2,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Jalapenos</title>
-  <link rel="stylesheet" type="text/css" href="../styles/style.css">
+  <title>Team Bombers</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <div id="navbarPlaceholder">
@@ -15,13 +15,12 @@
   <div id="footerPlaceholder">
   </div>
 
-  <script src="../scripts/page_generation/navbar.js"></script>
-  <!-- <script type="module" src="../scripts/page_generation/team.js" team="bombers"></script> -->
+  <script src="/js/page_generation/navbar-footer-upButton.js"></script>
+
   <script type="module">
-    import generateTeamPage from '../scripts/page_generation/team.js';
-    import {teamInfo} from '../team_content/jalapenos.js';
-    generateTeamPage(teamInfo);
+    import { generateTeamPage } from '/js/page_generation/team.js';
+    import { jalapenos } from '/data/teamsData.js';
+    generateTeamPage(jalapenos);
   </script>
-  <script src="../scripts/page_generation/footer.js"></script>
 </body>
 </html>
