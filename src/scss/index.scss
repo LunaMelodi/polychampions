@@ -1,7 +1,36 @@
 @import 'variables.scss';
 
 body {
-    color: $primary;
+  margin: 0;
+  font-family: $font;
+  background: $body-bg;
+  color: $body-text;
+}
+
+#navbar {
+  background: $navbar-bg;
+  display: flex;
+  >a {
+    padding: 1em;
+    text-decoration: none;
+    color: $navbar-text;
+    background: $navbar-bg;
+    &:hover {
+      background: $navbar-hover;
+    }
+  }
+}
+
+#footer {
+  font-size: small;
+  text-align: center;
+  color: #ddd;
+  background: #333;
+  padding: 1em;
+}
+
+#content {
+  padding: 10px;
 }
 
 /* Style The Dropdown Button */

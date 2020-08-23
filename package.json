@@ -1,7 +1,7 @@
 {
   "name": "polychampions",
   "version": "1.0.0",
-  "description": "A website for the pPolyChampions Polytopia League",
+  "description": "A website for the PolyChampions Polytopia League",
   "main": "\u001f\u001f",
   "scripts": {
     "test": "test",
@@ -12,6 +12,8 @@
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "build:images": "imagemin src/img/img-before-minification/* --out-dir=src/img",
     "watch:images": "onchange \"src/img/img-before-minification\" -- npm run build:images",
+    "build:html": "node src/js/main.js",
+    "watch:html": "onchange \"src/data\" -- npm run build:html",
     "serve": "browser-sync start --server \"src\" --files \"src\"",
     "watch": "run-p serve watch:*",
     "build": "run-p build:*"
@@ -38,5 +40,8 @@
     "onchange": "^7.0.2",
     "postcss-cli": "^7.1.1",
     "stylelint": "^13.6.1"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.2"
   }
 }
