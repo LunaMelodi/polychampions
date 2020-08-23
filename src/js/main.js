@@ -9,10 +9,10 @@ function render(template, target, context) {
 }
 
 function renderFolder(folder) {
-    var files = fs.readdirSync('src/data/' + folder);
+    var files = fs.readdirSync('src/view-content/' + folder);
     for (file of files) {
         var title = file.slice(0, file.length - 5);
-        var body = fs.readFileSync('src/data/' + folder + '/' + file);
+        var body = fs.readFileSync('src/view-content/' + folder + '/' + file);
         render('root', folder + '/' + title, { title: title, body: body })
     }
 }
