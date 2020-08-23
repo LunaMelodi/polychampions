@@ -1,0 +1,47 @@
+{
+  "name": "polychampions",
+  "version": "1.0.0",
+  "description": "A website for the PolyChampions Polytopia League",
+  "main": "\u001f\u001f",
+  "scripts": {
+    "test": "test",
+    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
+    "css:scss": "node-sass --output-style compressed -o src/css src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r src/css/*.css",
+    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "build:images": "imagemin src/img/img-before-minification/* --out-dir=src/img",
+    "watch:images": "onchange \"src/img/img-before-minification\" -- npm run build:images",
+    "build:html": "node src/js/main.js",
+    "watch:html": "onchange \"src/data\" -- npm run build:html",
+    "serve": "browser-sync start --server \"src\" --files \"src\"",
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunaMelodi/polychampions.git"
+  },
+  "keywords": [
+    "Polytopia"
+  ],
+  "author": "Luna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LunaMelodi/polychampions/issues"
+  },
+  "homepage": "https://github.com/LunaMelodi/polychampions#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss-cli": "^7.1.1",
+    "stylelint": "^13.6.1"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.2"
+  }
+}

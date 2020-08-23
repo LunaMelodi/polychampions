@@ -1,0 +1,10 @@
+<p>statsdemo.html content</p>
+<div id="apiPlaceholder"></div>
+<script type="module">
+  let apiPlaceholder = document.querySelector('#apiPlaceholder');
+  fetch('http://localhost:5000/')
+  .then(data => data.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+
+</script>
