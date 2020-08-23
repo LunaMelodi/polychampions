@@ -7,28 +7,21 @@ body {
   color: $body-text;
 }
 
-#navbarPlaceholder {
+#navbar {
   background: $navbar-bg;
-  >ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    >li {
-      padding: 1em;
-      background: $navbar-bg;
-      list-style-type: none;
-      &:hover {
-        background: $navbar-hover;
-      }
-      >a {
-        text-decoration: none;
-        color: $navbar-text;
-      }
+  display: flex;
+  >a {
+    padding: 1em;
+    text-decoration: none;
+    color: $navbar-text;
+    background: $navbar-bg;
+    &:hover {
+      background: $navbar-hover;
     }
   }
 }
 
-#footerPlaceholder {
+#footer {
   font-size: small;
   text-align: center;
   color: #ddd;
@@ -36,6 +29,6 @@ body {
   padding: 1em;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+#content {
   padding: 10px;
 }

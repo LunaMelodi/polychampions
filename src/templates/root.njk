@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+  {% block head %}
+    <title>{{ title }}</title>
+  {% endblock %}
+</head>
+<body>
+  <div id="navbar">
+    <a href="/index">PolyChampions</a>
+    <a href="/teams/bombers.html">Teams</a>
+    <a href="/stats/statsdemo.html">Stats</a>
+    <a href="/guides/guidedemo.html">Guides</a>
+  </div>
+  <div id="content">
+    {% block body %}
+      {{ body | safe }}
+    {% endblock %}
+  </div>
+  <div id="footer">
+    PolyChampions website footer. Created by Luna. Stats brought to you with help from Legorooj, Nelluk, and the PolyChampions stats team. Graphics done by Newt.<br><br>Join now on Discord!
+  </div>
+</body>
+</html>

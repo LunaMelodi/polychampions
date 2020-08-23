@@ -1,0 +1,22 @@
+{% extends 'src/templates/root.njk' %}
+
+{% block head %}
+  <title>Team {{ team.proName }}</title>
+{% endblock %}
+
+{% block body %}
+  <h2>{{ team.proName }} and {{ team.minorName }}</h2>
+  <h3>About {{ team.ProName }}:</h3>
+  <p>{{ team.about }}</p>
+  <h3>Team History:</h3>
+  <p>{{ team.history }}</p>
+  {% if team.trophies %}
+    <h3>Trophies:</h3>
+    <p>
+      {% set comma = joiner() %}
+      {% for trophy in team.trophies %}
+        {{ trophy }} {{ comma() }}
+      {% endfor %}
+    </p>
+  {% endif %}
+{% endblock %}
