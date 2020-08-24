@@ -13,7 +13,7 @@
     "build:images": "imagemin src/img/img-before-minification/* --out-dir=src/img",
     "watch:images": "onchange \"src/img/img-before-minification\" -- npm run build:images",
     "build:html": "node src/js/main.js",
-    "watch:html": "onchange \"src/data\" -- npm run build:html",
+    "watch:html": "onchange \"src/view-content/stats/*\" \"src/view-content/guides/*\" \"src/index.html\" -- npm run build:html",
     "serve": "browser-sync start --server \"src\" --files \"src\"",
     "watch": "run-p serve watch:*",
     "build": "run-p build:*"
