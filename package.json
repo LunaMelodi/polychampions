@@ -1,7 +1,7 @@
 {
   "name": "polychampions",
   "version": "1.0.0",
-  "description": "Polychamps website\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[F",
+  "description": "A website for the Polytopia League -- Polychampions",
   "main": "index.js",
   "scripts": {
     "test": "test"
