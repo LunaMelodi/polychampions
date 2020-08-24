@@ -5,6 +5,11 @@ body {
   font-family: $font;
   background: $body-bg;
   color: $body-text;
+  font-size: 1.2em;
+}
+
+p {
+  text-indent: 80px;
 }
 
 #navbar {
@@ -12,12 +17,16 @@ body {
   display: flex;
   >a {
     padding: 1em;
+    margin-right: 3em;
     text-decoration: none;
     color: $navbar-text;
     background: $navbar-bg;
     &:hover {
       background: $navbar-hover;
     }
+  }
+  :first-child {
+    margin-right: 10em;
   }
 }
 
@@ -30,7 +39,15 @@ body {
 }
 
 #content {
-  padding: 10px;
+  padding: 2em 6em;
+}
+
+#arrowTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 99;
 }
 
 /* Style The Dropdown Button */
