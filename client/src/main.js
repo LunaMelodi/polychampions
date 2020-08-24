@@ -15,7 +15,11 @@ function transferFolder(folder) {
     var files = fs.readdirSync('src/' + folder);
     for (file of files) {
         file = folder + '/' + file;
-        fs.copyFileSync('src/' + file, 'dist/' + file);
+        if (fs.lstatSync('src/' + file).isDirectory()) {
+            transferFolder(file);
+        } else {
+            fs.copyFileSync('src/' + file, 'dist/' + file);
+        }
     }
 }
 
