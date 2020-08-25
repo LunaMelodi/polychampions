@@ -1,6 +1,6 @@
 var nunjucks = require('nunjucks');
 var fs = require('fs');
-var teams = require('./data/teamsData.js');
+var teams = require('../data/teamsData.js');
 
 
 function makeFolder(path) {
