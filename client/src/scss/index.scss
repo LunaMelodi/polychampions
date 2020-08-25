@@ -2,8 +2,11 @@
 
 section {
   padding: 1rem 0 0 0;
-  > * {
-    padding: 0 2rem 1rem 2rem;
+  > h1, h2, h3, h4, h5, h6 {
+    padding: 0rem 2rem;
+  }
+  > p {
+    padding: 0 2rem 0.5rem 2rem;
   }
   &:after {
     content: "";
@@ -41,7 +44,7 @@ section {
   }
   &:last-of-type {
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2-bg 50%, $accent-2-bg);
+      height: 0;
     }
   }
 }
