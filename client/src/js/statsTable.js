@@ -11,10 +11,10 @@ function sortData(col = 1, isAscending = false) {
     console.log('bad column. aborting sortData()!');
     return;
   }
-  
+
   let runOnce = false;
   var sortedData = responseData.data.slice(1).sort((a, b) => {
-    
+
     if (isAscending) {
       if (!runOnce) console.log('sortData() sorting by ascending');
       runOnce = true;
@@ -24,7 +24,7 @@ function sortData(col = 1, isAscending = false) {
     else {
       if (!runOnce) console.log('sortData() sorting by descending');
       runOnce = true;
-      
+
       return b[col] - a[col];
     }
   })
@@ -92,9 +92,9 @@ function handleSort(evt) {
     isAscending = false;
     currentSortingColumn = targetIndex;
     createAndAddTable(sortData(targetIndex, isAscending));
-  } 
-  else { 
-    
+  }
+  else {
+
     console.log('toggle isAscending');
     console.log('isAscending before: '+ isAscending);
     isAscending = !isAscending;

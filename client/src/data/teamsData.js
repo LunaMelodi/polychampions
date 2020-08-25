@@ -15,7 +15,7 @@ module.exports.cosmonauts = {
   history: "we were there, and now we are here",
   trophies: []
 }
-  
+
 module.exports.crawfish = {
   shortName: "crawfish",
   proName: "The Crawfish",
@@ -51,7 +51,7 @@ module.exports.jets = {
   history: "we were there, and now we are here",
   trophies: []
 }
-  
+
 module.exports.lightning = {
   shortName: "lightning",
   proName: "The Lightning",
