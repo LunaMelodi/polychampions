@@ -8,16 +8,11 @@ body {
   font-size: 1.2em;
 }
 
-p {
-  text-indent: 80px;
-}
-
-#navbar {
+nav {
   background: $navbar-bg;
   display: flex;
   >a {
     padding: 1em;
-    margin-right: 3em;
     text-decoration: none;
     color: $navbar-text;
     background: $navbar-bg;
@@ -25,21 +20,48 @@ p {
       background: $navbar-hover;
     }
   }
-  :first-child {
-    margin-right: 10em;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+section {
+  padding-top: 1rem;
+  > * {
+    padding: 0 2rem 1rem 2rem;
+  }
+  &:after {
+    content: "";
+    height: 5rem;
+    width: 100%;
+    display: block;
+  }
+  &:nth-last-of-type(odd) {
+    background: $accent-1;
+    &:after {
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2 50%, $accent-2);
+    }
+  }
+  &:nth-last-of-type(even) {
+    background: $accent-2;
+    &:after {
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1 50%, $accent-1);
+    }
+  }
+  &:last-of-type {
+    &:after {
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1 50%, $accent-1);
+    }
   }
 }
 
-#footer {
+footer {
   font-size: small;
   text-align: center;
   color: #ddd;
   background: #333;
   padding: 1em;
-}
-
-#content {
-  padding: 2em 6em;
 }
 
 #arrowTop {
