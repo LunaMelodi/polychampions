@@ -1,0 +1,25 @@
+{# Not .njk because https://github.com/mozilla/nunjucks/pull/1225 #}
+{% for row in table %}
+  {% if loop.first %}
+    <tr>
+      {% for content in row %}
+        <th onclick="handleSort(this)">
+          {{ content }}
+          {% if currentSortingColumn == loop.index-1 %}
+            {% if isAscending %}
+              ⬆
+            {% else %}
+              ⬇️
+            {% endif %}
+          {% endif %}
+        </th>
+      {% endfor %}
+    </tr>
+  {% else %}
+    <tr>
+      {% for content in row %}
+        <td>{{ content }}</td>
+      {% endfor %}
+    </tr>
+  {% endif %}
+{% endfor %}
