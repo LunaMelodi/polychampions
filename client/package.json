@@ -13,7 +13,7 @@
     "build:images": "imagemin src/img/* --out-dir=dist/img",
     "watch:images": "onchange src/img/* -- npm run build:images",
     "build:html": "node src/main.js",
-    "watch:html": "onchange src/view-content/* src/data/* src/templates/* src/js/* src/main.js-- npm run build:html",
+    "watch:html": "onchange src/view-content/* src/data/* src/templates/* src/js/* src/main.js -- npm run build:html",
     "build:njk": "nunjucks-precompile src/templates/client-side > dist/js/templates.js",
     "watch:njk": "onchange src/templates/client-side/* -- npm run build:njk",
     "serve": "browser-sync start --server dist --files dist",
