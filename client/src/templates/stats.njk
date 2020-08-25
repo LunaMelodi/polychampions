@@ -8,8 +8,10 @@
 
 {% block body %}
   {{ body | safe }}
-  <table id="statsTable">
-    <tr><td>Fetching data...</td></tr>
-  </table>
+  <section>
+    <table id="statsTable">
+      <tr><td>Fetching data...</td></tr>
+    </table>
+  </section>
   <script src="/js/statsTable.js"/>
 {% endblock %}
