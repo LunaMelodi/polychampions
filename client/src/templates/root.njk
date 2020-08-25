@@ -9,26 +9,26 @@
   {% endblock %}
 </head>
 <body>
-  <div id="navbar">
+  <nav>
     <a href="/">PolyChampions</a>
     <a href="/teams/bombers.html">Teams</a>
     <a href="/stats/statsdemo.html">Stats</a>
     <a href="/guides/guidedemo.html">Guides</a>
-  </div>
+  </nav>
 
-  <div id="content">
+  <main>
     {% block body %}
       {{ body | safe }}
     {% endblock %}
-  </div>
+  </main>
 
   <div onclick="topFunction()" id="arrowTop" hidden>
     <i class="fas fa-arrow-up"></i>
   </div>
 
-  <div id="footer">
+  <footer>
     PolyChampions website footer. Created by Luna and Artemis. Stats brought to you with help from Legorooj, Nelluk, and the PolyChampions stats team. Graphics done by Newt.<br><br>Join now on Discord!
-  </div>
+  </footer>
 
   <script>
     /*let arrowTop = document.querySelector('#arrowTop');

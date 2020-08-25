@@ -8,16 +8,11 @@ body {
   font-size: 1.2em;
 }
 
-p {
-  text-indent: 80px;
-}
-
-#navbar {
+nav {
   background: $navbar-bg;
   display: flex;
   >a {
     padding: 1em;
-    margin-right: 3em;
     text-decoration: none;
     color: $navbar-text;
     background: $navbar-bg;
@@ -25,21 +20,18 @@ p {
       background: $navbar-hover;
     }
   }
-  :first-child {
-    margin-right: 10em;
-  }
 }
 
-#footer {
+main {
+  margin: 0em 2em;
+}
+
+footer {
   font-size: small;
   text-align: center;
   color: #ddd;
   background: #333;
   padding: 1em;
-}
-
-#content {
-  padding: 2em 6em;
 }
 
 #arrowTop {
