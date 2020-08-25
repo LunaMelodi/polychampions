@@ -49,6 +49,10 @@ footer {
   right: 20px;
   cursor: pointer;
   z-index: 99;
+  background: $body-text;
+  color: $body-bg;
+  padding: 15px;
+  border-radius: 50%;
 }
 
 /* Style The Dropdown Button */
