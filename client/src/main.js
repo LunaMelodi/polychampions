@@ -1,6 +1,6 @@
 var nunjucks = require('nunjucks');
 var fs = require('fs');
-var teams = require('../data/teamsData.js');
+var teams = require('./data/teamsData.js');
 
 
 function makeFolder(path) {
@@ -8,7 +8,6 @@ function makeFolder(path) {
         fs.mkdirSync(path);
     }
 }
-
 
 function transferFolder(folder) {
     makeFolder('dist/' + folder);
@@ -23,19 +22,18 @@ function transferFolder(folder) {
     }
 }
 
-
 function render(template, target, context) {
     var html = nunjucks.render('src/templates/' + template + '.njk', context);
     fs.writeFileSync('dist/' + target + '.html', html)
 }
 
-function renderFolder(folder) {
+function renderFolder(folder, template) {
     makeFolder('dist/' + folder);
     var files = fs.readdirSync('src/view-content/' + folder);
     for (file of files) {
         var title = file.slice(0, file.length - 5);
         var body = fs.readFileSync('src/view-content/' + folder + '/' + file);
-        render('root', folder + '/' + title, { title: title, body: body })
+        render(template, folder + '/' + title, { title: title, body: body })
     }
 }
 
@@ -45,6 +43,6 @@ for (team of teams.allTeams) {
     render('team', 'teams/' + team.shortName, { team: team });
 }
 render('index', 'index', {});
-renderFolder('stats');
-renderFolder('guides');
+renderFolder('stats', 'stats');
+renderFolder('guides', 'root');
 transferFolder('js');
