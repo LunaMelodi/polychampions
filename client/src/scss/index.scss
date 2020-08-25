@@ -11,21 +11,30 @@ section {
     width: 100%;
     display: block;
   }
-  &:nth-last-of-type(odd) {
-    background: $accent-1;
+  &:nth-last-of-type(3n + 2) {
+    background: $accent-1-bg;
+    color: $accent-1-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2 50%, $accent-2);
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2-bg 50%, $accent-2-bg);
     }
   }
-  &:nth-last-of-type(even) {
-    background: $accent-2;
+  &:nth-last-of-type(3n + 1) {
+    background: $accent-2-bg;
+    color: $accent-2-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1 50%, $accent-1);
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-3-bg 50%, $accent-3-bg);
+    }
+  }
+  &:nth-last-of-type(3n) {
+    background: $accent-3-bg;
+    color: $accent-3-text;
+    &:after {
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1-bg 50%, $accent-1-bg);
     }
   }
   &:last-of-type {
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1 50%, $accent-1);
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2-bg 50%, $accent-2-bg);
     }
   }
 }
