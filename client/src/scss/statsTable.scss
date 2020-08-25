@@ -1,14 +1,24 @@
 table {
   border-collapse: collapse;
+  padding-left: 2rem;
+  display: block;
 }
 
-table, th, td {
+th, td {
   border: 1px solid black;
-
 }
 
-tr:nth-child(even) {background-color: #d8e2ff;}
-tr:hover {background-color: #bbc7fb;}
+tr:nth-child(even) {
+  background-color: #d8e2ff;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tr:hover {
+  background-color: #bbc7fb;
+}
 
 th, td {
   padding: 10px;
