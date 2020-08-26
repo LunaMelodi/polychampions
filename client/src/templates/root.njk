@@ -30,38 +30,6 @@
     PolyChampions website footer. Created by Luna and Artemis. Stats brought to you with help from Legorooj, Nelluk, and the PolyChampions stats team. Graphics done by Newt.<br><br>Join now on Discord!
   </footer>
 
-  <script src="/js/navbarscroll.js">
-  <script>
-    /*let arrowTop = document.querySelector('#arrowTop');
-    arrowTop.onclick = function() {
-      window.scrollTo(pageXOffset, 0);
-      // after scrollTo, there will be a "scroll" event, so the arrow will hide automatically
-    };
-
-    window.addEventListener('scroll', function() {
-      arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
-    });*/
-
-
-      //Get the button:
-    mybutton = document.getElementById("arrowTop");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-  </script>
+  <script src="/js/uiElements.js"></script>
 </body>
 </html>
