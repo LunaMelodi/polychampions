@@ -11,6 +11,7 @@ body {
 nav {
   background: $navbar-bg;
   display: flex;
+  flex-wrap: wrap;
   >a {
     position: relative;
     overflow: hidden;
