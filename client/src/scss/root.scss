@@ -53,6 +53,10 @@ footer {
   color: $body-bg;
   padding: 15px;
   border-radius: 50%;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 /* Style The Dropdown Button */
