@@ -12,12 +12,30 @@ nav {
   background: $navbar-bg;
   display: flex;
   >a {
+    position: relative;
+    overflow: hidden;
     padding: 1em;
     text-decoration: none;
     color: $navbar-text;
     background: $navbar-bg;
-    &:hover {
+    transition: background-color 2s;
+    z-index: 1;
+    &:after {
+      content: "";
       background: $navbar-hover;
+      display: block;
+      position: absolute;
+      clip-path: circle(0%);
+      transition: clip-path 0.5s;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    &:hover:after {
+      clip-path: circle(100%);
+      transition: clip-path 1s;
     }
   }
 }
