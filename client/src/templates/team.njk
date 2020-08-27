@@ -2,10 +2,13 @@
 
 {% block head %}
   <title>Team {{ team.proName }}</title>
+  <link rel="stylesheet" href="/css/teams.css">
 {% endblock %}
 
 {% block body %}
-  <section><h2>{{ team.proName }} and {{ team.minorName }}</h2></section>
+  <section style="background-color:{{ team.bgColor }};color:{{ team.fgColor }}">
+    <h2>{{ team.proName }} and {{ team.minorName }}</h2>
+  </section>
   <section>
     <h3>About {{ team.ProName }}:</h3>
     <p>{{ team.about }}</p>

@@ -17,6 +17,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
   >a {
     position: relative;
     overflow: hidden;
@@ -51,7 +52,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 main {
-  max-width: 960px;
+  max-width: $main-width;
   margin: 3em auto 0 auto;
 }
 
