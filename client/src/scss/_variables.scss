@@ -1,15 +1,18 @@
-@import 'https://fonts.googleapis.com/css2?family=Ubuntu&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Heebo&display=swap';
 
-$font: Ubuntu, sans-serif;
+$font: Heebo, sans-serif;
+$main-width: 960px;
 
 $body-bg: #fff;
-$navbar-bg: #333;
-$navbar-hover: #222;
-$footer-bg: #333;
+$navbar-bg: #111;
+$navbar-hover: #000;
+$footer-bg: #111;
 
 $body-text: #000;
 $navbar-text: #fff;
 $footer-text: #ddd;
 
-$accent-1: #b03045;
-$accent-2: #4e459d;
+$accent-1-bg: #b03045;
+$accent-1-text: #fff;
+$accent-2-bg: #4e459d;
+$accent-2-text: #fff;

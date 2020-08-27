@@ -1,35 +1,17 @@
 @import 'variables.scss';
 
-body {
-  margin: 0;
-  font-family: $font;
-  background: $body-bg;
-  color: $body-text;
-  font-size: 1.2em;
-}
 
-nav {
-  background: $navbar-bg;
-  display: flex;
-  >a {
-    padding: 1em;
-    text-decoration: none;
-    color: $navbar-text;
-    background: $navbar-bg;
-    &:hover {
-      background: $navbar-hover;
-    }
-  }
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
+main {
+  max-width: 100%;
 }
 
 section {
-  padding-top: 1rem;
-  > * {
-    padding: 0 2rem 1rem 2rem;
+  padding: 1rem 0 0 0;
+  > h1, h2, h3, h4, h5, h6 {
+    padding: 0rem 2rem;
+  }
+  > p {
+    padding: 0 2rem 0.5rem 2rem;
   }
   &:after {
     content: "";
@@ -37,82 +19,37 @@ section {
     width: 100%;
     display: block;
   }
-  &:nth-last-of-type(odd) {
-    background: $accent-1;
+  &:nth-last-of-type(4n + 3) {
+    background: $accent-1-bg;
+    color: $accent-1-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2 50%, $accent-2);
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $body-bg 50%, $body-bg);
     }
   }
-  &:nth-last-of-type(even) {
-    background: $accent-2;
+  &:nth-last-of-type(4n + 2) {
+    background: $body-bg;
+    color: $body-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1 50%, $accent-1);
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2-bg 50%, $accent-2-bg);
+    }
+  }
+  &:nth-last-of-type(4n + 1) {
+    background: $accent-2-bg;
+    color: $accent-2-text;
+    &:after {
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $body-bg 50%, $body-bg);
+    }
+  }
+  &:nth-last-of-type(4n) {
+    background: $body-bg;
+    color: $body-text;
+    &:after {
+      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1-bg 50%, $accent-1-bg);
     }
   }
   &:last-of-type {
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1 50%, $accent-1);
+      height: 0;
     }
   }
-}
-
-footer {
-  font-size: small;
-  text-align: center;
-  color: #ddd;
-  background: #333;
-  padding: 1em;
-}
-
-#arrowTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 99;
-}
-
-/* Style The Dropdown Button */
-.dropbtn {
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
