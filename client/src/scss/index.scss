@@ -7,12 +7,6 @@ main {
 
 section {
   padding: 1rem 0 0 0;
-  > h1, h2, h3, h4, h5, h6 {
-    padding: 0rem 2rem;
-  }
-  > p {
-    padding: 0 2rem 0.5rem 2rem;
-  }
   &:after {
     content: "";
     height: 5rem;
@@ -50,6 +44,19 @@ section {
   &:last-of-type {
     &:after {
       height: 0;
+    }
+    padding-bottom: 2rem;
+  }
+  .section-wrapper {
+    max-width: $main-width;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    h2 {
+      font-size: 2em;
+    }
+    i {
+      padding-right: 1rem;
     }
   }
 }
