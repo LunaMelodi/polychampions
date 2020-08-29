@@ -66,6 +66,9 @@ footer {
   color: $footer-text;
   background: $footer-bg;
   padding: 1em;
+  a {
+    color: $blurple;
+  }
 }
 
 #arrowTop {
