@@ -1,4 +1,4 @@
 * @LunaMelodi
 
-client/src/db_api @Legorooj
+db/*.js @Legorooj
 *.css *.scss @Artemis21 @LunaMelodi
