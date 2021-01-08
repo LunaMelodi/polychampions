@@ -10,7 +10,7 @@ module.exports.bombers = {
 }
 
 module.exports.cosmonauts = {
-  shortName: "cosmnauts",
+  shortName: "cosmonauts",
   proName: "The Cosmonauts",
   minorName: "The Space Cadets",
   about: "great team 10/10",

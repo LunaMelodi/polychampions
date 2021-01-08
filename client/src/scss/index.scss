@@ -3,53 +3,64 @@
 
 main {
   max-width: 100%;
+  margin: 0;
 }
 
 section {
   padding: 1rem 0 0 0;
-  > h1, h2, h3, h4, h5, h6 {
-    padding: 0rem 2rem;
-  }
-  > p {
-    padding: 0 2rem 0.5rem 2rem;
-  }
   &:after {
     content: "";
     height: 5rem;
     width: 100%;
     display: block;
   }
-  &:nth-last-of-type(4n + 3) {
+  &:nth-of-type(4n + 1) {
     background: $accent-1-bg;
     color: $accent-1-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $body-bg 50%, $body-bg);
+      background-image: linear-gradient(to bottom right, transparent, transparent 49%, $body-bg 50%, $body-bg);
     }
   }
-  &:nth-last-of-type(4n + 2) {
+  &:nth-of-type(4n + 2) {
     background: $body-bg;
     color: $body-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-2-bg 50%, $accent-2-bg);
+      background-image: linear-gradient(to bottom right, transparent, transparent 49%, $accent-2-bg 50%, $accent-2-bg);
     }
   }
-  &:nth-last-of-type(4n + 1) {
+  &:nth-of-type(4n + 3) {
     background: $accent-2-bg;
     color: $accent-2-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $body-bg 50%, $body-bg);
+      background-image: linear-gradient(to bottom right, transparent, transparent 49%, $body-bg 50%, $body-bg);
     }
   }
-  &:nth-last-of-type(4n) {
+  &:nth-of-type(4n) {
     background: $body-bg;
     color: $body-text;
     &:after {
-      background-image: linear-gradient(to bottom right, transparent, transparent 50%, $accent-1-bg 50%, $accent-1-bg);
+      background-image: linear-gradient(to bottom right, transparent, transparent 49%, $accent-1-bg 50%, $accent-1-bg);
     }
   }
   &:last-of-type {
     &:after {
       height: 0;
+    }
+    padding-bottom: 2rem;
+  }
+  &:first-of-type {
+    padding-top: 4.5em;
+  }
+  .section-wrapper {
+    max-width: $main-width;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    h2 {
+      font-size: 2em;
+    }
+    i {
+      padding-right: 1rem;
     }
   }
 }
