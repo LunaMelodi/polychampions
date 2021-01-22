@@ -7,12 +7,12 @@
           {{ content }}
           {% if currentSortingColumn == loop.index-1 %}
             {% if isAscending %}
-              ⬆
+              ↑
             {% else %}
-              ⬇️
+              ↓
             {% endif %}
           {% else %}
-            ⇵
+            ⇅
           {% endif %}
         </th>
       {% endfor %}

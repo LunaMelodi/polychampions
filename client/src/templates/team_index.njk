@@ -1,0 +1,20 @@
+{% extends 'src/templates/root.njk' %}
+
+{% block head %}
+  <title>Teams - PolyChampions</title>
+{% endblock %}
+
+{% block body %}
+  <br>
+  <h1>PolyChampions Teams</h1>
+  <p>
+    Teams are at the core of PolyChampions. Once you graduate from Nova, you'll be able to join the draft, and if you're lucky, you'll be picked by a team. When you're drafted by a team, you'll start in the teams Junior division. If you consistently play and communicate well, you'll eventually be promoted to Pro, the top of the league.
+  </p>
+  <p>Each team has a unique history and atmosphere. Read more below:</p>
+  <ul>
+    {% for team in teams %}
+      <li><a href="/teams/{{ team.shortName }}">
+        {{ team.proName }} and {{ team.minorName }}
+      </a></li>
+    {% endfor %}
+{% endblock %}

@@ -18,7 +18,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 1;
-  >a {
+  > a {
     position: relative;
     overflow: hidden;
     padding: 1em;
@@ -49,15 +49,16 @@ nav {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0 1rem;
+}
+
+li {
+  margin: 0 1rem;
 }
 
 main {
   max-width: $main-width;
   margin: 3em auto 0 auto;
-}
-
-section {
-  padding: 1em;
 }
 
 footer {
@@ -66,6 +67,9 @@ footer {
   color: $footer-text;
   background: $footer-bg;
   padding: 1em;
+  a {
+    color: $blurple;
+  }
 }
 
 #arrowTop {
