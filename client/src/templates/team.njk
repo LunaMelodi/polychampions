@@ -1,7 +1,7 @@
 {% extends 'src/templates/root.njk' %}
 
 {% block head %}
-  <title>Team {{ team.proName }}</title>
+  <title>{{ team.proName }} - Polychampions</title>
   <link rel="stylesheet" href="/css/teams.css">
 {% endblock %}
 
@@ -9,14 +9,15 @@
   <section style="background-color:{{ team.bgColor }};color:{{ team.fgColor }}">
     <h2>{{ team.proName }}</h2>
     <h3>and {{ team.minorName }}</h3>
+    <h4>{{ team.slogan }}</h4>
   </section>
   <section>
     <h3>About {{ team.ProName }}:</h3>
-    <p>{{ team.about }}</p>
+    <p>{{ team.about|safe }}</p>
   </section>
   <section>
     <h3>Team History:</h3>
-    <p>{{ team.history }}</p>
+    <p>{{ team.history|safe }}</p>
   </section>
   {% if team.trophies %}
     <section>
@@ -25,6 +26,8 @@
         {% set comma = joiner() %}
         {% for trophy in team.trophies %}
           {{ trophy }} {{ comma() }}
+        {% else %}
+          {{ team.proName }} have no trophies yet.
         {% endfor %}
       </p>
     </section>

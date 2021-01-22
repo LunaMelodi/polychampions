@@ -1,18 +1,21 @@
-var nunjucks = require('nunjucks');
-var fs = require('fs');
-var teams = require('./data/teamsData.js');
+const nunjucks = require('nunjucks');
+const fs = require('fs');
+const teams = require('./data/teamsData.js');
 
+const PLACEHOLDER = `There's nothing here yet. If you have something to write,
+ <a href="https://github.com/lunamelodi/polychampions">contribute on GitHub</a>
+ or <a href="https://artemisdev.xyz">contact Artemis</a>.`;
 
 function makeFolder(path) {
-    if (!fs.existsSync(path)){
-        fs.mkdirSync(path);
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path, { recursive: true });
     }
 }
 
 function transferFolder(folder) {
     makeFolder('dist/' + folder);
-    var files = fs.readdirSync('src/' + folder);
-    for (file of files) {
+    const files = fs.readdirSync('src/' + folder);
+    for (var file of files) {
         file = folder + '/' + file;
         if (fs.lstatSync('src/' + file).isDirectory()) {
             transferFolder(file);
@@ -23,26 +26,30 @@ function transferFolder(folder) {
 }
 
 function render(template, target, context) {
-    var html = nunjucks.render('src/templates/' + template + '.njk', context);
+    const html = nunjucks.render('src/templates/' + template + '.njk', context);
     fs.writeFileSync('dist/' + target + '.html', html)
 }
 
 function renderFolder(folder, template) {
     makeFolder('dist/' + folder);
-    var files = fs.readdirSync('src/view-content/' + folder);
-    for (file of files) {
-        var title = file.slice(0, file.length - 5);
-        var body = fs.readFileSync('src/view-content/' + folder + '/' + file);
+    const files = fs.readdirSync('src/view-content/' + folder);
+    for (const file of files) {
+        const title = file.slice(0, file.length - 5);
+        const body = fs.readFileSync('src/view-content/' + folder + '/' + file);
         render(template, folder + '/' + title, { title: title, body: body })
     }
 }
 
-makeFolder('dist');
 makeFolder('dist/teams');
-for (team of teams.allTeams) {
+
+for (var team of teams.allTeams) {
+    team.about = team.about || PLACEHOLDER;
+    team.history = team.history || PLACEHOLDER;
     render('team', 'teams/' + team.shortName, { team: team });
 }
+
 render('index', 'index', {});
+render('team_index', 'teams/index', { teams: teams.allTeams });
 renderFolder('stats', 'stats');
 renderFolder('guides', 'root');
 transferFolder('js');
