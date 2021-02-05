@@ -48,13 +48,13 @@ module.exports.dragons = {
   fgColor: "#000000"
 }
 
-module.exports.jalapenos = {
-  shortName: "jalapenos",
+module.exports.reapers = {
+  shortName: "reapers",
   proName: "The Reapers",
   minorName: "The Jalapenos",
   slogan: "Can you take the heat?",
-  about: "",
-  history: "",
+  about: "The Reapers/Jalapeños are all about community! We take players many teams have counted out and train them into stars with our team training program. At the Reapers, you will just as easily see us researching the statistics behind Polytopia as sharing memes in the meme competition!",
+  history: "The Reapers are the league’s newest expansion team. Formed by a core of free agents and founded by Polytopia Gaming, KingJuliusthePro, and ChaseDaAce, they were the first team to play only in the junior league. They quickly shocked everyone by reaching the playoffs in their first season and got the respect of the league. The Reapers are now a fully fledged team playing in the senior and junior leagues, and are ready to take the league by storm!",
   trophies: [],
   bgColor: "#FF5A00",
   fgColor: "#000000"
@@ -65,8 +65,10 @@ module.exports.jets = {
   proName: "The Jets",
   minorName: "The Cropdusters",
   slogan: "Mature players. Active on Discord. No drama.",
-  about: "",
-  history: "",
+  about: "Through the years we've attracted the ever elusive subset of gamers that identify as older and slightly more mature, but everyone is welcome! Our mantra has been the same from the beginning: we like winning, collaboration, and coffee. Once a Jet, always a Jet!",
+  history: `The Jets have a long history of excellence, winning a title at both the pro and junior levels. The Jets have been a recurring feature of the league playoffs, winning it all in S2 and making the finals in S1 and S6. The Cropdusters, our beloved junior team, won it all in S6. Through our ups and downs the Jets have always remained consistent in one aspect: team strength. We've held multiple positions in the top ranked ELO players and have had power in both the top of our roster and depth throughout our lineup.
+
+The mantle of leadership has passed from Xarxa to Rickdaheals and now to Merlin401.`,
   trophies: [],
   bgColor: "#8C1EBF",
   fgColor: "#FFFFFF"
@@ -152,7 +154,7 @@ module.exports.allTeams = [
   module.exports.vikings,
   module.exports.crawfish,
   module.exports.dragons,
-  module.exports.jalapenos,
+  module.exports.reapers,
   module.exports.jets,
   module.exports.lightning,
   module.exports.mallards,
