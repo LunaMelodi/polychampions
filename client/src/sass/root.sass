@@ -1,0 +1,149 @@
+@import 'variables.sass'
+
+body
+  background: $body-bg
+  color: $body-text
+  margin: 0
+  font-family: $theme-font
+
+.navbar
+  display: flex
+  justify-content: flex-end
+  flex-wrap: wrap
+
+.navbar__link
+  margin: 1.5em
+  color: $body-text
+  text-decoration: none
+  transition: color 0.5s
+  text-transform: lowercase
+  font-variant: small-caps
+  font-weight: 900
+  display: flex
+  align-items: center
+
+.navbar__link:hover
+  color: $navbar-text-hover
+
+.navbar__link--home
+  text-transform: none
+  font-variant: normal
+  margin-right: auto
+  font-weight: 800
+
+.navbar__link__icon
+  height: 2.5em
+  margin-right: 0.5em
+
+@media only screen and (max-width: 470px)
+    .navbar
+        justify-content: center
+
+    .navbar__link--home
+        font-variant: small-caps
+        font-weight: 900
+        margin-right: 1.5em
+        .navbar__link__text
+            display: none
+
+        &::after
+            content: "home"
+
+    .navbar__link__icon
+        display: none
+
+.main
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  position: relative
+
+.page_intro
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin: 2rem
+
+.main--centered
+  align-items: center
+
+.page_intro--centered
+  align-items: center
+  margin-top: 7rem
+
+  .page_intro__header
+    border: 0
+
+@media only screen and (max-width: 470px)
+  .page_intro--centered
+    margin-top: 2rem
+
+.page_intro__icon, .page_intro__icon::before
+  height: 6rem
+  font-size: 6rem
+
+.page_intro__header
+  margin: 2rem 0 0 0
+  font-size: 3rem
+  font-weight: 900
+
+.page_intro__subheader
+  margin: 1.7rem 0
+  font-size: 2rem
+  font-weight: 900
+
+.page_intro__description
+  margin: 0
+  text-align: center
+  font-size: 1.2rem
+  font-weight: 800
+
+.page_intro__header, .page_intro__subheader, .page_content__header
+  padding-bottom: 5px
+  border-bottom: 3px solid
+  border-image: linear-gradient(to right, $accent-1, $accent-2) 1
+  display: inline-block
+
+@media only screen and (max-width: 420px)
+  .page_intro__header
+    font-size: 2.5rem
+
+.page_intro__slogan
+  margin: 0
+  text-transform: lowercase
+  font-variant: small-caps
+  text-align: center
+  font-weight: 800
+
+.page_content
+  margin: 0 1rem 1rem 2rem
+  font-weight: 600
+  max-width: unquote("max(50vw, 600px)")
+
+.page_content__p
+  margin: 0
+  margin-bottom: 1rem
+  a, a:visited
+    color: #44f
+
+.page_image
+  width: unquote("calc(max(50vw, 360px) - 4rem)")
+  margin: 2rem
+
+@media only screen and (min-width: 750px)
+  .page_image
+    float: right
+    position: absolute
+    right: 2rem
+    top: 2rem
+    height: 20vw
+    width: 20vw
+
+.footer
+  margin-top: 2rem
+  background: $footer-bg
+  padding: 3rem
+  text-align: center
+
+.footer a
+  color: $footer-link

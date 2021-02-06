@@ -2,19 +2,36 @@
 
 {% block head %}
   <title>Teams - PolyChampions</title>
+  <meta name="description" content="Teams are at the core of PolyChampions. Once you graduate from Nova, you'll be able to join the draft, and if you're lucky, you'll be picked by a team. When you're drafted by a team, you'll start in the teams Junior division. If you consistently play and communicate well, you'll eventually be promoted to Pro, the top of the league."/>
+  <meta name="og:title" content="PolyChampions Teams"/>
+  <meta name="og:image" content="{{ host }}/img/logo.png"/>
+  <meta name="og:description" content="Teams are at the core of PolyChampions. Once you graduate from Nova, you'll be able to join the draft, and if you're lucky, you'll be picked by a team. When you're drafted by a team, you'll start in the teams Junior division. If you consistently play and communicate well, you'll eventually be promoted to Pro, the top of the league."/>
+  <link rel="stylesheet" href="/css/teams.css">
 {% endblock %}
 
 {% block body %}
-  <br>
-  <h1>PolyChampions Teams</h1>
-  <p>
-    Teams are at the core of PolyChampions. Once you graduate from Nova, you'll be able to join the draft, and if you're lucky, you'll be picked by a team. When you're drafted by a team, you'll start in the teams Junior division. If you consistently play and communicate well, you'll eventually be promoted to Pro, the top of the league.
-  </p>
-  <p>Each team has a unique history and atmosphere. Read more below:</p>
-  <ul>
-    {% for team in teams %}
-      <li><a href="/teams/{{ team.shortName }}">
-        {{ team.proName }} and {{ team.minorName }}
-      </a></li>
-    {% endfor %}
+  <main class="main">
+    <section class="page_intro">
+      <i class="fas fa-trophy page_intro__icon"></i>
+      <h1 class="page_intro__header">PolyChampions Teams</h1>
+    </section>
+    <section class="page_content">
+      <p class="page_content__p">
+        Teams are at the core of PolyChampions. Once you graduate from Nova, you'll be able to join the draft, and if you're lucky, you'll be picked by a team. When you're drafted by a team, you'll start in the teams Junior division. If you consistently play and communicate well, you'll eventually be promoted to Pro, the top of the league.
+      <p>
+      <p class="page_content__p">
+        Each team has a unique history and atmosphere. Read more below:
+      </p>
+    </section>
+    <section class="team_list">
+      {% for team in teams %}
+        <a href="/teams/{{ team.shortName }}" class="team_card">
+          <img src="/img/teams/{{ team.shortName }}.png"
+              class="team_card__logo" alt="{{ team.proName }} logo"/>
+          <h2 class="team_card__pro_name">{{ team.proName }}</h2>
+          <h3 class="team_card__junior_name">and {{ team.minorName }}</h3>
+        </a>
+      {% endfor %}
+    </section>
+  </main>
 {% endblock %}

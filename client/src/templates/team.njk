@@ -2,27 +2,33 @@
 
 {% block head %}
   <title>{{ team.proName }} - Polychampions</title>
-  <link rel="stylesheet" href="/css/teams.css">
+  <meta name="og:title" content="{{ team.proName }} - PolyChampions"/>
+  <meta name="description" content="{{ team.about }}"/>
+  <meta name="og:image" content="{{ host }}/img/teams/{{ team.shortName }}.png"/>
+  <meta name="og:description" content="{{ team.about }}"/>
+  <link rel="stylesheet" href="/css/team.css">
 {% endblock %}
 
 {% block body %}
-  <section style="background-color:{{ team.bgColor }};color:{{ team.fgColor }}">
-    <h2>{{ team.proName }}</h2>
-    <h3>and {{ team.minorName }}</h3>
-    <h4>{{ team.slogan }}</h4>
-  </section>
-  <section>
-    <h3>About {{ team.ProName }}:</h3>
-    <p>{{ team.about|safe }}</p>
-  </section>
-  <section>
-    <h3>Team History:</h3>
-    <p>{{ team.history|safe }}</p>
-  </section>
-  {% if team.trophies %}
-    <section>
-      <h3>Trophies:</h3>
-      <p>
+  <main class="main" style="--team-colour: {{ team.bgColor }};">
+    <section class="page_intro">
+      <h1 class="page_intro__header">{{ team.proName }}</h1>
+      <h2 class="page_intro__subheader">and {{ team.minorName }}</h2>
+      <h3 class="page_intro__slogan">{{ team.slogan }}</h3>
+    </section>
+    <img src="/img/teams/{{ team.shortName }}.png"
+        class="page_image" alt="{{ team.proName }} logo"/>
+    <section class="page_content">
+      <h3 class="page_content__header">About {{ team.ProName }}</h3>
+      <p class="page_content__p">{{ team.about|safe }}</p>
+    </section>
+    <section class="page_content">
+      <h3 class="page_content__header">Team History</h3>
+      <p class="page_content__p">{{ team.history|safe }}</p>
+    </section>
+    <section class="page_content">
+      <h3 class="page_content__header">Trophies</h3>
+      <p class="page_content__p">
         {% set comma = joiner() %}
         {% for trophy in team.trophies %}
           {{ trophy }} {{ comma() }}
@@ -31,5 +37,5 @@
         {% endfor %}
       </p>
     </section>
-  {% endif %}
+  </main>
 {% endblock %}

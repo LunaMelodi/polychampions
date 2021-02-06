@@ -1,0 +1,28 @@
+@import 'variables.sass'
+
+.card_item
+  border-radius: 1rem
+  background: $accent-gradient
+  padding: 3rem
+  margin: 2rem
+  color: #fff
+  width: unquote("min(800px, calc(100vw - 10rem))")
+  transition: transform 0.2s
+  box-shadow: 0 0 20px $body-shadow
+  &:hover
+    transform: scale(1.01, 1.01)
+
+.card_item__header
+  margin-top: 0
+  margin-bottom: 2rem
+  font-weight: 800
+
+.card_item__content
+  margin: 0
+  margin-bottom: 1rem
+  font-weight: 600
+
+.card_item__link
+  display: block
+  color: $body-link
+  font-weight: 700

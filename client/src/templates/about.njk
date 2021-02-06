@@ -1,0 +1,61 @@
+{% extends 'src/templates/root.njk' %}
+
+{% block head %}
+  <title>About - PolyChampions</title>
+  <meta name="description" content="PolyChampions is a Discord server that seeks to provide a competitive and fun team-focused experience for Polytopia players."/>
+  <meta name="og:title" content="About - PolyChampions"/>
+  <meta name="og:image" content="{{ host }}/img/logo.png"/>
+  <meta name="og:description" content="PolyChampions is a Discord server that seeks to provide a competitive and fun team-focused experience for Polytopia players."/>
+{% endblock %}
+
+{% block body %}
+  <main class="main">
+    <section class="page_intro">
+      <h1 class="page_intro__header">About PolyChampions</h1>
+      <p class="page_intro__slogan">The premier Polytopia community for competitive team play.</p>
+    </section>
+    <img src="/img/logo.png" class="page_image" alt="PolyChampions logo"/>
+    <section class="page_content">
+      <h3 class="page_content__header">What is PolyChampions?</h3>
+      <p class="page_content__p">
+         PolyChampions is a Discord server that seeks to provide a competitive and fun team-focused experience for Polytopia players of all shapes and colors.
+      </p>
+    </section>
+    <section class="page_content">
+      <h3 class="page_content__header">The Nova League</h3>
+      <p class="page_content__p">
+        There are two Nova teams - Nova Blue and Nova Red. When you first join PolyChampions, a Nova team is the only team you will be able to join. The primary goal of the Nova League is to show off your skills to Team Recruiters so that you can join a Junior team, and eventually a Pro team.
+      </p>
+    </section>
+    <section class="page_content">
+      <h3 class="page_content__header">Junior & Pro Leagues</h3>
+      <p class="page_content__p">
+        There are <a href="/teams">twelve teams</a> in the league, each of which has a Junior team and Pro team.
+      </p>
+      <p class="page_content__p">
+        As a Junior player, you will be able to compete in season games to earn a spot in the season playoffs. Win the playoffs and your team becomes the Junior Champions for that season!
+      </p>
+    </section>
+    <section class="page_content">
+      <h3 class="page_content__header">Joining a Junior Team</h3>
+      <p class="page_content__p">
+        In the <i>Nova</i> League, you play <i>Nova</i> games (duh!). Team recruiters will be watching you as you play these games, and displaying good communication with your teammates is the best way to get picked. You may also find "recruiting games", where you'll be able to play against or with recruiters, to show off your skill directly!
+      </p>
+      <p class="page_content__p">
+        Once you've played three Nova games, you'll become a "Nova Grad", and able to join the draft. The draft happens every two weeks. During the draft, each team will pick a Nova Grad to join their team.
+      </p>
+      <p class="page_content__p">
+        If you don't get picked during the draft, don't worry. You'll become a "Free Agent". Teams use "Free Agent Tokens" (the currency of the server) to bid on free agents they want on their team.
+      </p>
+      <p class="page_content__p">
+        When a team drafts you or wins a bid on you, you'll join their Junior team. After you have played for them for a while, if you are good enough and communicate well, your team leaders and recruiters will promote you to Pro, the top of the league.
+      </p>
+    </section>
+    <section class="page_content">
+      <h3 class="page_content__header">Find Out More</h3>
+      <p class="page_content__p">
+        Feel free to explore this site further, or <a href="https://discord.gg/2VZnPJJBzH">join the Discord server</a> and learn more!
+      </p>
+    </section>
+  </main>
+{% endblock %}

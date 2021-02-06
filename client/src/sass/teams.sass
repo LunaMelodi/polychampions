@@ -1,0 +1,62 @@
+@import 'variables.sass'
+
+$min-card-width: 300px
+$card-height: 100px
+$card-margin: 32px
+// Scroll bars are included in the vw unit, so we need to allow for them.
+$scroll-bar-width: 20px
+
+.team_list
+    display: flex
+    flex-wrap: wrap
+    padding-left: $card-margin
+
+.team_card
+    margin: $card-margin $card-margin 0 0
+    padding: 1rem
+    display: block
+    border-radius: 1rem
+    width: calc(100vw - #{$card-margin * 2 + $scroll-bar-width})
+    position: relative
+    overflow: hidden
+    height: $card-height
+    background: $accent-gradient
+    transition: transform 0.2s
+    box-shadow: 0 0 20px $body-shadow
+    text-decoration: none
+    &:hover
+      transform: scale(1.1, 1.1)
+
+.team_card__logo
+    width: 200%
+    position: absolute
+    left: -50%
+    top: calc(-100vw + #{$card-margin * 2 + $scroll-bar-width + $card-height / 2})
+    filter: blur(10px) brightness(40%)
+
+@media only screen and (min-width: $min-card-width * 2 + $card-margin * 5 + $scroll-bar-width)
+    .team_card
+        width: calc(50vw - #{$card-margin * 2.5 + $scroll-bar-width / 2})
+
+    .team_card__logo
+        top: calc(-50vw + #{$card-margin * 2.5 + $scroll-bar-width / 2 + $card-height / 2})
+
+@media only screen and (min-width: $min-card-width * 3 + $card-margin * 7 + $scroll-bar-width)
+    .team_card
+        width: calc(33.33vw - #{$card-margin * 2.33 + $scroll-bar-width / 3})
+
+    .team_card__logo
+        top: calc(-33.33vw + #{$card-margin * 2.33 + $scroll-bar-width / 3 + $card-height / 2})
+
+@media only screen and (min-width: $min-card-width * 4 + $card-margin * 9 + $scroll-bar-width)
+    .team_card
+        width: calc(25vw - #{$card-margin * 2.25 + $scroll-bar-width / 4})
+
+    .team_card__logo
+        top: calc(-25vw + #{$card-margin * 2.25 + $scroll-bar-width / 4 + $card-height / 2})
+
+.team_card__pro_name, .team_card__junior_name
+    color: #fff
+    display: block
+    position: relative
+    z-index: 2

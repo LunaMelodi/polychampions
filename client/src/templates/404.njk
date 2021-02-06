@@ -1,0 +1,21 @@
+{% extends 'src/templates/root.njk' %}
+
+{% block head %}
+  <title>404 - PolyChampions</title>
+  <meta name="description" content="That link doesn't look right."/>
+  <meta name="og:title" content="Error: 404 - PolyChampions"/>
+  <meta name="og:image" content="{{ host }}/img/logo.png"/>
+  <meta name="og:description" content="That link doesn't look right."/>
+{% endblock %}
+
+{% block body %}
+  <main class="main main--centered">
+    <section class="page_intro page_intro--centered">
+      <i class="fas fa-search page_intro__icon"></i>
+      <h1 class="page_intro__header">404 Error</h1>
+      <p class="page_intro__description">
+        Couldn't find that page.
+      </p>
+    </section>
+  </main>
+{% endblock %}

@@ -1,35 +1,32 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/root.css">
   <script src="https://kit.fontawesome.com/84d9aa7337.js" crossorigin="anonymous"></script>
-  {% block head %}
-    <title>{{ title }}</title>
-  {% endblock %}
+  <meta name="og:type" content="article"/>
+  <meta name="og:url" content="{{ url }}"/>
+  <link rel="icon" href="/img/logo.png">
+  {% block head %}{% endblock %}
 </head>
 <body>
-  <nav>
-    <a href="/">PolyChampions</a>
-    <a href="/teams">Teams</a>
-{# Add these back when we have meaningful content for them.
-    <a href="/stats/statsdemo">Stats</a>
-    <a href="/guides/guidedemo">Guides</a>
-#}
+  <nav class="navbar">
+    <a href="/" class="navbar__link navbar__link--home">
+      <img src="/img/logo.png" alt="PolyChampions Logo" class="navbar__link__icon"/>
+      <span class="navbar__link__text">PolyChampions</span>
+    </a>
+    <a href="/teams" class="navbar__link">Teams</a>
+    <a href="#" class="navbar__link">Guides</a>
+    <a href="/about" class="navbar__link">About</a>
   </nav>
 
-  <main>
-    {% block body %}
-      {{ body | safe }}
-    {% endblock %}
-  </main>
+  {% block body %}{% endblock %}
 
-  <div onclick="topFunction()" id="arrowTop" hidden>
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
-  <footer>
-    PolyChampions website footer. Created by Luna and Artemis. Stats brought to you with help from Legorooj, Nelluk, and the PolyChampions stats team. Graphics by Newt.<br><br>
+  <footer class="footer">
+    PolyChampions website. Created by Luna and Artemis. Stats brought to you with help from Legorooj, Nelluk, and the PolyChampions stats team. Graphics by Newt.<br><br>
+    This site is still in beta, so expect to see links that don't lead anywhere and placeholder content.<br><br>
     <a href="https://discord.gg/2VZnPJJBzH">Join now on Discord!</a>
   </footer>
 

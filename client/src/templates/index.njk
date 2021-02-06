@@ -1,56 +1,47 @@
 {% extends 'src/templates/root.njk' %}
 
 {% block head %}
-  <title>PolyChampions</title>
+  <title>Home - PolyChampions</title>
+  <meta name="description" content="Polychampions: The premier Polytopia community for competetive play. Get drafted, join a team! Compete for the championship together with your teammates in a high stakes fight to be the best!"/>
+  <meta name="og:title" content="PolyChampions"/>
+  <meta name="og:image" content="{{ host }}/img/logo.png"/>
+  <meta name="og:description" content="Polychampions: The premier Polytopia community for competetive play. Get drafted, join a team! Compete for the championship together with your teammates in a high stakes fight to be the best!"/>
   <link rel="stylesheet" href="/css/index.css">
 {% endblock %}
 
 {% block body %}
-  <section>
-    <div class="section-wrapper">
-      <i class="fas fa-trophy fa-fw fa-5x"></i>
-      <div class="inner-section-wrapper">
-        <h2>Join a team.</h2>
-        <p>
-          Compete for the championship together with your teammates in a high stakes fight to be the best.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="section-wrapper">
-      <i class="fas fa-users fa-fw fa-5x"></i>
-      <div class="inner-section-wrapper">
-        <h2>An awesome community.</h2>
-        <p>
-         Be part of a friendly community and a competitive Polytopia league. When you join you will have access to the PolyElo bot that keeps track of the ranking of every player, among other things.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="section-wrapper">
-      <i class="fas fa-graduation-cap fa-fw fa-5x"></i>
-      <div class="inner-section-wrapper">
-        <h2>Learn from the best.</h2>
-        <p>
-         Get personal coaching from some of the best players in the game and learn how to top the leaderboards.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="section-wrapper">
-      <i class="fas fa-gamepad fa-fw fa-5x"></i>
-      <div class="inner-section-wrapper">
-        <h2>Thousands of competetive polytopia games.</h2>
-        <p>
-          Pokémon! Gotta catch 'em all!
-          Pokémon! Oh you're my best friend
-          Pokémon! Gotta catch 'em all!
-          Pokémon! Gotta catch'em all!
-        </p>
-      </div>
-    </div>
-  </section>
+  <main class="main main--centered">
+    <section class="page_intro page_intro--centered">
+      <img src="/img/logo.png" alt="PolyChampions Logo" class="page_intro__icon"/>
+      <h1 class="page_intro__header">PolyChampions</h1>
+      <p class="page_intro__slogan">The premier Polytopia community for competitive team play.</p>
+    </section>
+    <section class="card_item">
+      <h2 class="card_item__header">Join a team.</h2>
+      <p class="card_item__content">
+        Compete for the championship together with your teammates in a high stakes fight to be the best.
+      </p>
+      <a class="card_item__link" href="/teams">View the teams here</a>
+    </section>
+    <section class="card_item">
+      <h2 class="card_item__header">An awesome community.</h2>
+      <p class="card_item__content">
+        Be part of a friendly community and a competitive Polytopia league.
+      </p>
+      <a class="card_item__link" href="https://discord.gg/2VZnPJJBzH">Join the Discord server</a>
+    </section>
+    <section class="card_item">
+      <h2 class="card_item__header">Learn from the best.</h2>
+      <p class="card_item__content">
+        Get personal coaching from some of the best players in the game and learn how to top the leaderboards.
+      </p>
+      <a class="card_item__link" href="#">Have a look at our tribe walkthroughs</a>
+    </section>
+    <section class="card_item">
+      <h2 class="card_item__header">Tens of thousands of competetive polytopia games.</h2>
+      <p class="card_item__content">
+        All managed by our powerful PolyELOBot, which ranks every player so you can see where you stand.
+      </p>
+    </section>
+  </main>
 {% endblock %}
