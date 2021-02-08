@@ -31,7 +31,11 @@
       <p class="page_content__p">
         {% set comma = joiner() %}
         {% for trophy in team.trophies %}
-          {{ trophy }} {{ comma() }}
+          <div class="trophy">
+            <i class="fas fa-trophy trophy__icon"></i>
+            <span class="trophy__season">{{ trophy.season }}</span>
+            <span class="trophy__league">{{ trophy.league }}</span>
+          </div>
         {% else %}
           {{ team.proName }} have no trophies yet.
         {% endfor %}

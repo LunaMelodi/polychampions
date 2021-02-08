@@ -1,3 +1,32 @@
+@import 'variables.sass'
+
 .page_intro__header, .page_intro__subheader, .page_content__header
     border-color: var(--team-colour)
     border-image: none
+
+.trophy
+    display: inline-flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    margin: 0 1.5rem
+
+.trophy__icon
+    font-size: 5rem
+    color: $body-text
+    position: absolute
+    top: 0
+
+.trophy__season
+    font-size: 2rem
+    margin-top: 0.5rem
+    margin-bottom: 2rem
+    z-index: 1
+    font-weight: 800
+    color: $body-bg
+
+.trophy__league
+    text-transform: uppercase
+    font-size: 1.5rem
+    font-variant: small-caps
+    font-weight: 800

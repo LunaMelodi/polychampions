@@ -5,7 +5,12 @@ module.exports.bombers = {
   slogan: "We make more noise than heavy metal!",
   about: "",
   history: "",
-  trophies: ["s5junior"],
+  trophies: [
+    {
+      league: "junior",
+      season: 5
+    }
+  ],
   bgColor: "#4742B6",
   fgColor: "#FFFFFF"
 }
@@ -31,7 +36,16 @@ module.exports.crawfish = {
   history: `On August 8th, 2018 Crawfish became the 10th team in the Major league after a multi-round server vote on possible teams. It was founded by Hughmungus and “Koric 1v2”, who quickly expanded the team with a vast array of talent. After winning 2 consecutive seasons 17-1 and losing only a single playoff game between the seasons, many of Crawfish's founding members retired or took a step back from the game.
 
 “theShow” became the second leader through an election, cementing Craw's democratic precedent. Crawfish continued to be stripped of its veterans through season 5 and 6 - during which Jprawnz and then Vorce lead the team - but going into s7 their new talent matured to become veterans in their own right, and some older players returned or became more active. With a powerful season 7 performance that gained them second seed going into the playoffs, and their junior Shrimps becoming the dominant minor team, Crawfish is poised to be a perennial top team.`,
-  trophies: [],
+  trophies: [
+    {
+      league: "pro",
+      season: 3
+    },
+    {
+      leage: "pro",
+      season: 4
+    }
+  ],
   bgColor: "#FA8072",
   fgColor: "#000000"
 }
@@ -66,10 +80,19 @@ module.exports.jets = {
   minorName: "The Cropdusters",
   slogan: "Mature players. Active on Discord. No drama.",
   about: "Through the years we've attracted the ever elusive subset of gamers that identify as older and slightly more mature, but everyone is welcome! Our mantra has been the same from the beginning: we like winning, collaboration, and coffee. Once a Jet, always a Jet!",
-  history: `The Jets have a long history of excellence, winning a title at both the pro and junior levels. The Jets have been a recurring feature of the league playoffs, winning it all in S2 and making the finals in S1 and S6. The Cropdusters, our beloved junior team, won it all in S6. Through our ups and downs the Jets have always remained consistent in one aspect: team strength. We've held multiple positions in the top ranked ELO players and have had power in both the top of our roster and depth throughout our lineup.
+  history: `The Jets have a long history of excellence, winning a title at both the pro and junior levels. The Jets have been a recurring feature of the league playoffs, winning it all in season 2 and making the finals in season 1 and 6. The Cropdusters, our beloved junior team, won it all in season 6. Through our ups and downs the Jets have always remained consistent in one aspect: team strength. We've held multiple positions in the top ranked ELO players and have had power in both the top of our roster and depth throughout our lineup.
 
 The mantle of leadership has passed from Xarxa to Rickdaheals and now to Merlin401.`,
-  trophies: [],
+  trophies: [
+    {
+      league: "pro",
+      season: 2
+    },
+    {
+      league: "junior",
+      season: 6
+    }
+  ],
   bgColor: "#8C1EBF",
   fgColor: "#FFFFFF"
 }
@@ -81,7 +104,12 @@ module.exports.lightning = {
   slogan: "We are a nicely run, family business.",
   about: "",
   history: `Created at the start of season 1, Lightning had a rough start. Starlord led the team through the first season, before handing the role to Scott. Scott wasn’t keen on being the leader but there were no other good candidates so he kept it. The team did badly until season 4 when Bakalol, Ben and Chief joined the team from Ronin. Under Bakalol they did much better, finishing no lower than fifth place for the 4 seasons he led them. At the end of season 7, Bakalol stepped down and gave leadership to VikingTheCat, who will hopefully lead Lightning to a glorious future.`,
-  trophies: [],
+  trophies: [
+    {
+      league: "pro",
+      season: 5
+    }
+  ],
   bgColor: "#C4C41B",
   fgColor: "#000000"
 }
@@ -103,7 +131,7 @@ module.exports.plague = {
   proName: "The Plague",
   minorName: "The Rats",
   slogan: "Our morale is infectious! No, seriously!",
-  about: "",
+  about: "The Plague (with a name more relevant than ever in 2021!) is a top team famed for three things in the league: outstanding playing ability, impeccable teamwork and being too shy to talk in public. We prefer to keep to ourselves but that doesn't mean we don't have fun! We encourage authentic competition and guarantee a fun atmosphere in which we strive to master the Battle of Polytopia together.",
   history: "",
   trophies: [],
   bgColor: "#7DFF63",
@@ -127,12 +155,21 @@ module.exports.sparkies = {
   proName: "The Sparkies",
   minorName: "The Pups",
   slogan: "Our enemies will go blind from overexposure to pure awesomeness!",
-  about: "",
+  about: "Sparkies are a team of friendly players with a dedication to communication and polytopia. In season games Sparkies are always going for more wins. We have players from many different ages and nationalities and we are all mates here. If you like chess, polytopia, animals and a friendly and fun environment you will like Sparkies.",
   history: `One of the first few teams, Sparkies was created before the season 1. Sparkies had a successful first and second season (winning the Playoffs in season 1) before falling badly during season 3. However, Sparkies was rebuilt and rebranded in season 4, and since then they’ve been better than ever, with many of the top players.
 
 The Pups were created in season 5 as PolyChampions minor league expansion to allow more players to join teams. The junior team started off with a decent rating and continued to do well throughout season 6.
 `,
-  trophies: [],
+  trophies: [
+    {
+      league: "pro",
+      season: 1
+    },
+    {
+      league: "pro",
+      season: 6
+    }
+  ],
   bgColor: "#854D21",
   fgColor: "#FFFFFF"
 }
