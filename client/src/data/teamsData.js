@@ -42,7 +42,7 @@ module.exports.crawfish = {
       season: 3
     },
     {
-      leage: "pro",
+      league: "pro",
       season: 4
     }
   ],
