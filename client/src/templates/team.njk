@@ -20,11 +20,11 @@
         class="page_image" alt="{{ team.proName }} logo"/>
     <section class="page_content">
       <h3 class="page_content__header">About {{ team.ProName }}</h3>
-      <p class="page_content__p">{{ team.about|safe }}</p>
+      <p class="page_content__p">{{ team.about|nl2br|safe }}</p>
     </section>
     <section class="page_content">
       <h3 class="page_content__header">Team History</h3>
-      <p class="page_content__p">{{ team.history|safe }}</p>
+      <p class="page_content__p">{{ team.history|nl2br|safe }}</p>
     </section>
     <section class="page_content">
       <h3 class="page_content__header">Trophies</h3>

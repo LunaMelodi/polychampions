@@ -119,7 +119,9 @@ module.exports.mallards = {
   proName: "The Mallards",
   minorName: "The Drakes",
   slogan: "We are active, work as a team, and ensure a respectful environment!",
-  about: "",
+  about: `Playing with the Mallards, you get to have fun and you get to have friends! With these two key factors, we bring our A-Game every season. Our server continues to be a friendly and diverse space to just be 100% yourself. And the more, the merrier!
+
+“To be supported at my lowest, and to be praised at my greatest. That is the feeling I get from being a Mallard, and that’s what I try to give back every day!”`,
   history: "",
   trophies: [],
   bgColor: "#00462A",
