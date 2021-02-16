@@ -2,9 +2,11 @@ const nunjucks = require('nunjucks');
 const fs = require('fs');
 const teams = require('./data/teamsData.js');
 
-const PLACEHOLDER = `There's nothing here yet. If you have something to write,
- <a href="https://github.com/lunamelodi/polychampions">contribute on GitHub</a>
- or <a href="https://artemisdev.xyz">contact Artemis</a>.`;
+const PLACEHOLDER = (
+    "There's nothing here yet. If you have something to write, "
+    + '<a href="https://github.com/lunamelodi/polychampions">contribute on '
+    + 'GitHub</a> or <a href="https://artemisdev.xyz">contact Artemis</a>.'
+);
 const HOST = 'https://polytopia.win';
 
 function makeFolder(path) {
